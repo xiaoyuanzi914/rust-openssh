@@ -38,30 +38,19 @@
 - zlib（可选，若需要传输压缩支持）
 - FIDO2 安全令牌支持（需要 `libfido2`）
 
-### 克隆代码库
-
+### 运行/测试
 首先，克隆项目仓库：
 
 ```bash
 git clone https://github.com/xiaoyuanzi914/rust-openssh.git
 cd rust-openssh
 
-## 构建项目
-
 克隆后，你可以使用 Cargo 来构建项目：
 
-```bash
 cargo build --release
 
-## 运行测试
-
 构建完成后，你可以运行测试以确保一切正常：
 
-```bash
 cargo test
-
-## 配置与自定义
-
-构建完成后，你可以运行测试以确保一切正常：
 
 如果你希望在构建过程中配置特定选项，可以使用 Cargo 特性和环境变量。有关可用的构建选项，请参见 `Cargo.toml` 文件和 `build.rs` 脚本。
