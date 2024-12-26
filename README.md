@@ -1,6 +1,6 @@
 # rust-openssh
 
-`rust-openssh` 是一个将 OpenSSH 从 C 语言移植到 Rust 编程语言的项目。它实现了 SSH 协议（版本 2），用于安全的远程登录、命令执行和文件传输。该项目旨在使用 Rust 的特性（如内存安全和并发支持）提供更安全、高效、现代的 OpenSSH 实现。
+`rust-openssh` 是一个将 OpenSSH 从 C 语言移植到 Rust 编程语言的项目。源地址请参考：https://github.com/openssh/openssh-portable，它实现了 SSH 协议（版本 2），用于安全的远程登录、命令执行和文件传输。该项目旨在使用 Rust 的特性（如内存安全和并发支持）提供更安全、高效、现代的 OpenSSH 实现。
 
 ## 特性
 
@@ -25,18 +25,6 @@
 
 该项目为不在其他平台上提供的 OpenBSD API 提供了兼容层，并通过沙箱化特性增强了对更多操作系统的安全性。
 
-## 文档
-
-`rust-openssh` 的文档通过每个工具的手册页提供，这些文档会在构建过程中生成，安装后可以访问：
-
-- `ssh(1)`
-- `sshd(8)`
-- `ssh-keygen(1)`
-- `ssh-agent(1)`
-- `scp(1)`
-- `sftp(1)`
-- `ssh-keyscan(8)`
-- `sftp-server(8)`
 
 ## 构建 rust-openssh
 
@@ -55,5 +43,25 @@
 首先，克隆项目仓库：
 
 ```bash
-git clone https://github.com/yourusername/rust-openssh.git
+git clone https://github.com/xiaoyuanzi914/rust-openssh.git
 cd rust-openssh
+
+## 构建项目
+
+克隆后，你可以使用 Cargo 来构建项目：
+
+```bash
+cargo build --release
+
+## 运行测试
+
+构建完成后，你可以运行测试以确保一切正常：
+
+```bash
+cargo test
+
+## 配置与自定义
+
+构建完成后，你可以运行测试以确保一切正常：
+
+如果你希望在构建过程中配置特定选项，可以使用 Cargo 特性和环境变量。有关可用的构建选项，请参见 `Cargo.toml` 文件和 `build.rs` 脚本。
