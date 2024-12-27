@@ -40,6 +40,7 @@
 
 ### 运行/测试
 
+```bash
 首先，克隆项目仓库：
 
 git clone https://github.com/xiaoyuanzi914/rust-openssh.git
